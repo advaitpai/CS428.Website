@@ -1,0 +1,412 @@
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Project 1 | Advait Pai | CS 428</title>
+  <link rel="stylesheet" href="./css/project1.css" />
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous" />
+</head>
+
+<body style="background-color: #b2f3f3;">
+  <h1 class="text-center mb-5 bg-white py-4">Project 1 - Around The World</h1>
+  <div class="container">
+    <div class="row my-5">
+      <!-- Title -->
+
+      <div class="col-lg-12">
+        <!-- Introduction -->
+        <h2>Introduction</h2>
+        <div class="row mb-3">
+          <div class="col-lg-7">
+            <p style="text-align: justify;">
+              When I heard about Virtual, Augmented and Mixed Reality, the only things I knew about this subject were
+              what was I had readon the news and in articles. Wanting to know more, I chose to pursue this in my
+              coursework. I have opted for CS 428 - Virtual, Augmented and Mixed Reality as a part of my coursework.
+              This project entails creating an Augmented Reality based project. The aim of this project is to be able to
+              develop an Augmented Reality Application which will help us demonstrate our skills and understanding of
+              Unity, Vuforia and 3-D modelling other tools available. We have been given two cubes, namely the <a
+                href="https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&ved=2ahUKEwjWkMquk6L6AhWqlIkEHdpABzIQFnoECBMQAQ&url=https%3A%2F%2Fmergeedu.com%2Fdownload%2Ffile.php%3Ff%3Dpaper-merge-cube.pdf&usg=AOvVaw2hxuk0lTQF9te71tdNVWKJ">Merge
+                Cube</a> and the <a
+                href="https://desk.zoho.com/DocsDisplay?zgId=653540496&mode=inline&blockId=6oq3d06be3b62ba5544a4b9ce50873521cbf0">Class
+                Cube</a>, which can be downloaded from the links given. With these cubes we need to build AR objects on
+              top of them in the form of attractions. The key physical attractions in this project are
+              two cubes
+              and a laptop sticker, where one cube holds the Statue of Liberty in New York and the other cube holds a
+              stage of a Coldplay concert.
+            </p>
+          </div>
+          <div class="col-lg-4">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/Ot9K4iehXAQ"
+              title="YouTube video player" frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen></iframe>
+          </div>
+        </div>
+
+        <h2>Choice of Attraction/Models</h2>
+        <div class="row mb-3">
+          <div class="col-lg-12">
+            <p style="text-align: justify;">
+            <ul>
+              <li>
+                <h3>Statue of Liberty (New York):</h3>
+                <p>In the month May 2022, it was my first visit to the United States of America. I have always been
+                  entrigued by the country and I was not at all disappointed. The mesmerising beauty of the Statue of
+                  Liberty, along with the iconic Yellow Taxis were a highlight for me. Personally, I loved eating the
+                  New York Cheescake as well. Hence, you can see where some of my model choices come from. I also intend
+                  on visiting New York for Christmas, thus the elements of snow and christmas in the attraction.</p>
+              </li> 
+              <li>
+                <h3>Coldplay Concert (Mumbai):</h3>
+                <p>Mumbai is my home, a place where I have been born and brought. Before moving
+                  to the United States to pursue my masters, in Mumbai I would attend various concerts to satiate my
+                  love for music. I have tried to recreate the environment I experienced at a Coldplay concert. The
+                  model
+                  consistes of a stage and a singer along with lights and piano sounds, to recreate fireworks and music.
+                </p>
+                <h3>Laptop Sticker:</h3>
+                <p>
+                  I believe the laptop sticker must hold some significance to the person whose laptop is it. At the same
+                  time I feel the AR laptop sticker can also add some additional utility. Hence I have added some of my
+                  hobbies and a contact card on the Laptop Sticker.
+                </p>
+              </li> 
+            </ul>
+            </p>
+          </div>
+        </div>
+
+        <!-- Requirements -->
+        <h2>Requirements</h2>
+        <ul class="mb-5">
+          <li>
+            Unity Hub and Unity (Version 2021.3.6f1) –
+            <a href="https://unity3d.com/get-unity/download">Installation Link</a>
+          </li>
+          <li>
+            Vuforia (Version 10.9 or greater) -
+            <a href="https://developer.vuforia.com/downloads/SDK">Installation Link</a>
+          </li>
+          <li>
+            Vuforia License Key -
+            <a href="https://developer.vuforia.com/license-manager">Resource Link</a>
+          </li>
+          <li>
+            XCode (Make sure to have the latest version to support iOS16)
+          </li>
+          <li>
+            iOS > 12
+          </li>
+        </ul>
+
+        <!-- Installation Guide -->
+        <h2>Installation Guide</h2>
+        <ol>
+          <li class="mb-3">
+            <div class="row">
+              <div class="col-lg-8">
+                Access the GitHub using the following link:
+                <a href="https://github.com/advaitpai/CS428.P1.AdvaitPai">GitHub Repository</a>
+              </div>
+            </div>
+          </li>
+          <li class="mb-3">
+            <div class="row">
+              <div class="col-lg-8">
+                Click on code and then “Download ZIP”:
+              </div>
+
+              <div class="col-lg-4">
+                <img src="./images/project1/screenshot1.png" class="img-fluid float-end" />
+              </div>
+            </div>
+          </li>
+          <li class="mb-3">
+            <div class="row">
+              <div class="col-lg-8">
+                Open the Zip and extract its contents to a folder with the structure in the image
+              </div>
+
+              <div class="col-lg-4">
+                <img src="./images/project1/screenshot2.png" class="img-fluid float-end" />
+              </div>
+            </div>
+          </li>
+          <li class="mb-3">
+            <div class="row">
+              <div class="col-lg-8">
+                Open Unity Hub and click on “Open” next to “New Project”. In the File Explorer, navigate to the
+                folder containing the unzipped files. Once found, click “Open”. Make sure your unity version is Version
+                2021.3.6f1.
+              </div>
+
+              <div class="col-lg-4">
+                <img src="./images/project1/screenshot3.png" class="img-fluid float-end" />
+              </div>
+            </div>
+          </li>
+          <li class="mb-3">
+            <div class="row">
+              <div class="col-lg-7">
+                Once "Unity Package Manager Error" window appears, click on “Continue”. This error occurs due to
+                misconfigured Vuforia. A second
+                prompt "Enter Safe Mode" will appear as a result of this. Click “Ignore” here as well. We will be
+                resolving the error
+                shortly.
+              </div>
+
+              <div class="col-lg-2"><img src="./images/project1/screenshot4-1.png" class="img-fluid float-end" /></div>
+
+              <div class="col-lg-3">
+                <img src="./images/project1/screenshot4-2.png" class="img-fluid float-end" />
+              </div>
+            </div>
+          </li>
+          <li class="mb-3">
+            <div class="row">
+              <div class="col-lg-8">
+                The project scene window will look empty but we can ignore this too. Now in the Unity Window, on the
+                bottom-left side under the Assets folder, go to “Scenes” and drag
+                “Sample Scene” and replace it with "Untitled Scene". If “Untitled Scene" exists, Right Click and “Remove
+                Scene”.
+              </div>
+              <div class="col-lg-4">
+                <img src="./images/project1/screenshot5.png" class="img-fluid float-end" />
+              </div>
+            </div>
+          </li>
+          <li class="mb-3">
+            <div class="row">
+              <div class="col-lg-8">
+                Now we need to import Vuforia, to resolve all errors that were occurring. The download link is available
+                above. Download “Add Vuforia Engine to a Unity Project or upgrade to the latest version”. Once
+                downloaded,
+                double click the file, or drag it to the Unity project. This will open a “Import Unity Package” window.
+                Click “Import”.
+              </div>
+            </div>
+          </li>
+          <li class="mb-3">
+            <div class="row">
+              <div class="col-lg-8">
+                Now click “Help” in the taskbar and select “Reset Packages to Default”. Once reset, a prompt will appear
+                to “Add Vuforia”. Click “Update”.
+              </div>
+              <div class="col-lg-4">
+                <img src="./images/project1/screenshot6.png" class="img-fluid float-end" />
+              </div>
+            </div>
+          </li>
+          <li class="mb-3">
+            <div class="row">
+              <div class="col-lg-8">
+                You may also need to “Link you project to Unity ID”. Complete the steps as well.
+              </div>
+            </div>
+          </li>
+          <li class="mb-3">
+            <div class="row">
+              <div class="col-lg-8">
+                Now the project environment is setup! It should look like this.
+              </div>
+              <div class="col-lg-4">
+                <img src="./images/project1/screenshot7.png" class="img-fluid float-end" />
+              </div>
+            </div>
+          </li>
+          <li class="mb-3">
+            <div class="row">
+              <div class="col-lg-8">
+                Now click on AR Camera. On the right side in the “Inspector”, scroll down and click on “Open Vuforia
+                Configuration”. In the “Add License Key” replace the text with your own license key. You can get one on
+                the Vuforia Developer Website as well
+              </div>
+            </div>
+          </li>
+          <li class="mb-3">
+            <div class="row">
+              <div class="col-lg-8">
+                Now right below the project title, there is a “Play” symbol which you can click. And hold the cube,
+                and the output should be visible.
+              </div>
+              <div class="col-lg-4">
+                <img src="./images/project1/screenshot8.png" class="img-fluid float-end" />
+              </div>
+            </div>
+          </li>
+        </ol>
+
+        <h2 class="mb-4">Model Citations</h2>
+        <h3>Statue of Liberty (New York) Cube:</h3>
+        <ol>
+          <li>
+            <a href="https://skfb.ly/6wwZQ" target="_blank"><b>Statue of Liberty</b></a>
+            by Gravity Jack is licensed under
+            <a href="http://creativecommons.org/licenses/by/4.0/" target="_blank">Creative Commons Attribution.</a>
+          </li>
+          <li>
+            <a href="https://skfb.ly/6WMAv" target="_blank"><b>Low Poly Decorated Christmas Tree</b></a>
+            by lucasbaze is licensed under
+            <a href="http://creativecommons.org/licenses/by/4.0/" target="_blank">Creative Commons Attribution.</a>
+          </li>
+          <li>
+            <a href="https://3dwarehouse.sketchup.com/model/ab129605a0303bfd1ab9df4be75138d0/US-Taxi"
+              target="_blank"><b>US Taxi</b></a>
+            by Antics3D is licensed under
+            <a href="https://3dwarehouse.sketchup.com/tos/#license" target="_blank">3D Warehouse: General Model License
+              Agreement.</a>
+          </li>
+
+          <li>
+            <a href="https://www.mixamo.com/" target="_blank"><b>Man Serving Cake</b></a>
+            from Mixamo Quality 3D character animation in minutes. (2022). Retrieved September 2022.
+          </li>
+          <li>
+            <a href="https://assetstore.unity.com/packages/2d/textures-materials/4-snow-materials-high-quality-materials-collection-69201"
+              target="_blank"><b>4 Snow Materials [High Quality] [Materials Collection]</b></a>
+            by Danil Piskor is licensed under
+            <a href="https://unity.com/legal/as-terms" target="_blank">Standard Unity Asset Store EULA.</a>
+          </li>
+          <li>
+            <a href="https://assetstore.unity.com/packages/3d/environments/snowed-fence-6722" target="_blank"><b>Snowed
+                Fence</b></a>
+            by Justwo is licensed under
+            <a href="https://unity.com/legal/as-terms" target="_blank">Standard Unity Asset Store EULA.</a>
+          </li>
+          <li>
+            <a href="https://freesound.org/s/442791" target="_blank"><b>Magic Christmas</b></a>
+            by lena_orsa is licensed under
+            <a href="https://creativecommons.org/licenses/by-nc/3.0/" target="_blank">licensed under Noncommercial
+              3.0.</a>
+          </li>
+          <li><b>Cheesecake and Table</b> Made by me using Blender and Unity Shapes</li>
+          <img src="./images/project1/object3.png" style="height: 20rem;width:auto">
+          <li><b>Snowman</b> Made by me using Unity Shapes</li>
+          <img src="./images/project1/object4.png" style="height: 20rem;width:auto">
+        </ol>
+        <h3>Coldplay Concert (Mumbai) Cube:</h3>
+        <ol>
+          <li>
+            <a href="https://skfb.ly/T86Z" target="_blank"><b>Street Light</b></a>
+            by KloWorks is licensed under
+            <a href="http://creativecommons.org/licenses/by/4.0/" target="_blank">Creative Commons Attribution.</a>
+          </li>
+          <li>
+            <a href="https://assetstore.unity.com/packages/3d/props/low-poly-guitars-pack-161857" target="_blank"><b>Low
+                Poly Guitars Pack</b></a>
+            by studioNik is licensed under
+            <a href="https://unity.com/legal/as-terms" target="_blank">Standard Unity Asset Store EULA.</a>
+          </li>
+          <li>
+            <a href="https://www.mixamo.com/" target="_blank"><b>Singer from Mixamo</b></a>
+            from Mixamo Quality 3D character animation in minutes. (2022). Retrieved September 2022.
+          </li>
+          <li>
+            <a href="https://assetstore.unity.com/packages/2d/textures-materials/lowpoly-textures-pack-140717"
+              target="_blank"><b>Lowpoly Textures Pack</b></a>
+            by N-hance Studio is licensed under
+            <a href="https://unity.com/legal/as-terms" target="_blank">Standard Unity Asset Store EULA.</a>
+          </li>
+          <li>
+            <a href="https://freesound.org/people/Christianjinnyzoe/sounds/71157/" target="_blank"><b>piano
+                loop.mp3</b></a>
+            by Christianjinnyzoe is licensed under
+            <a href="https://creativecommons.org/licenses/sampling+/1.0/" target="_blank">Sampling+ License</a>
+          </li>
+          <li><b>Discoball</b> Made by me using Blender</li>
+          <img src="./images/project1/object1.png" style="height: 20rem;width:auto">
+          <li><b>Stage and Speaker</b> Made by me using Unity Shapes</li>
+          <img src="./images/project1/object2.png" style="height: 20rem;width:auto">
+        </ol>
+        <h3>Laptop Speaker:</h3>
+        <ol>
+          <li>
+            <a href="https://skfb.ly/6zxn9" target="_blank"><b>DJ Mixer Lowpoly</b></a>
+            by gunsk is licensed under
+            <a href="http://creativecommons.org/licenses/by/4.0/" target="_blank">Creative Commons Attribution.</a>
+          </li>
+          <li>
+            <a href="https://skfb.ly/6UxWR" target="_blank"><b>Rocket</b></a>
+            by Rafa Andrad is licensed under
+            <a href="http://creativecommons.org/licenses/by/4.0/" target="_blank">Creative Commons Attribution.</a>
+          </li>
+          <li>
+            <a href="https://assetstore.unity.com/packages/2d/textures-materials/lowpoly-textures-pack-140717"
+              target="_blank"><b>Lowpoly Textures Pack</b></a>
+            by N-hance Studio is licensed under
+            <a href="https://unity.com/legal/as-terms" target="_blank">Standard Unity Asset Store EULA.</a>
+          </li>
+          <li>
+            <a href="https://assetstore.unity.com/packages/3d/props/electronics/free-laptop-90315"
+              target="_blank"><b>Free Laptop</b></a>
+            by Vertex Studio is licensed under
+            <a href="https://unity.com/legal/as-terms" target="_blank">Standard Unity Asset Store EULA.</a>
+          </li>
+          <li><b>Contact Card</b> Made by me using Unity Shapes</li>
+          <img src="./images/project1/object6.png" style="height: 20rem;width:auto">
+          <li><b>Golf Hole</b> Made by me using Unity Shapes</li>
+          <img src="./images/project1/object5.png" style="height: 20rem;width:auto">
+        </ol>
+      </div>
+      <h2>Future of AR & AR Eyewear</h2>
+      <div class="row mb-3">
+        <div class="col-lg-8">
+          <p style="text-align: justify;">
+            Imagine a near-future where everyone does not wear regular spectacles or goggles but rather AR-enabled
+            eyewear. Fascinating? In my opinion, it is subjective. Techno-geeks like me could end up loving such eye
+            wear as it expands the available information in a particular instant. At the same time there could be a
+            whole section who simply would find such technology to be inconvenient them. Also, a user mind is a one that
+            seeks utility rather than fancy technology, hence for AR eyewear to be ‘popular’ it would need to satisfy a
+            consumer need rather than a fancy.
+          </p>
+          <p style="text-align: justify;">
+            For the popularity to increase, for AR eyewear that can show AR objects, it becomes imperative address some
+            of the following concerns. Can the AR eyewear interfere with the real environment on-demand? Do the AR
+            objects relay real information? And lastly, does the object need AR enhancements in the first place? I
+            believe that AR eyewear will become popular albeit AR objects may not be required. There are certain use
+            cases where AR eyewear could be beneficial like in medicine, or in manufacturing. This will lead to an
+            increase in commercial use of the technology. Another useful use of this could be in tight spaces where
+            there is not much physical space available to
+            display some object. An example could be preschool kids using the cubes (used in this project) as
+            educational tools. Life-like animations could be developed for animals or real world objects and displayed
+            on these tiny cubes, instead of making a trip to the real zoo.
+          </p>
+          <p style="text-align: justify;">
+            One segment I believe this could be made popular is for individuals who have special needs. Individuals with
+            lowered cognitive functions could simply wear these glasses, and have an array of guided information
+            available to them. For example, if the individual does not know how to use a particular object, a guided AR
+            tutorial could be displayed for the object or an explanation. This could be as simple as a small stop light
+            for crosswalks, where if an individual looks at a red light, the immediate footpath will be coloured red.
+            The only constraint of this would be the information should not confuse the individual rather than assist
+          </p>
+          <p style="text-align: justify;">
+            AR eyewear could also help when it comes to small object. For an engineer who has to work with small parts,
+            having an eyewear that on seeing this small part will magnify and highlight some key properties of the part
+            could help. But since we also consider the future for our future. In a scenario where AR eyewear are
+            equipped with high precision optics, we could use the technology to recreate microscopic things that are not
+            visible to the naked human eye and make them visible. Scientists in labs could use this to study cultures,
+            or microbes. Even general users could use this to see small objects, with specific applications (because not
+            everything needs AR enhancements). Specific applications like Nature Apps could be developed so that humans
+            could look at small insects like butterflies and have them magnified for their view.
+          </p>
+          <p style="text-align: justify;">
+            In conclusion, for the popularity and usefulness of these AR eyewear is heavily dependent on the utility that they provide and the amount of information gain they provide. The technologies still need to develop to be market ready.
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+
+  <!-- JavaScript Bundle with Popper -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>
