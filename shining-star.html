@@ -20,31 +20,255 @@
       <div class="col-lg-8 offset-lg-2">
         <!-- Steps to reproduce -->
 
-        <h3>Project by Advait Pai</h3>
+        <h2>Project by Advait Pai</h2>
 
-        <h1>Phase 1 completion</h1>
-        <p style="text-align: justify;">As a part of phase one, I have loaded the stars using a file called DataLoader.cs which is stored in the Assets folder. Once I load the stars, the same DataLoader.cs file contains the code logic to create constellations. For the scope of this submission I am only plotting <b>one</b> constellations. Additionally, in the GitHub repository (link below), the "data" directory contains the cleaning.ipynb which contains the cleaning logic.  </p>
-
-          <h1>Steps to Reproduce:</h1>
-          <div class="row mb-3">
-            <div class="col-lg-12">
-              <ol style="text-align: justify;">
-                <li>Clone the repository from this <a href="https://github.com/advaitpai/CS528_AdvaitPai" target="_blank">GitHub Link</a>. The one minute walkthrough video is available <a href="https://drive.google.com/file/d/101lgJKSUS-feux-IiJXryZ9oHBQStHok/view?usp=sharing" target="_blank">here</a>.</li>
-                <li>Open the downloaded folder.</li>
-                <li>The data folder contains the cleaning.ipynb which contains the code written by me to clean the data. This can be directly viewd in the GitHub repository or using JupyterNotebook or Visual Studio Code. </li>
-                <li>The omicron-unity directory contains the project I am developing for the CAVE2. It is a stripped down version of the Cube World Example.</li>
-                <li>Download the <a href="https://unity.com/releases/editor/archive" target="_blank">Unity Version 2019.2.11f1</a> using Unity Hub. If you do not have <a href="https://unity.com/unity-hub" target="_blank">Unity Hub</a>, install that as well.</li>
-                <li>Once downloaded, then in Unity Hub, click the "Add" button and then select the subfolder omicron-unity from the downloaded folder. It should automatically pickup the required Unity Version but if asked, choose the appropriate version.</li>
-                <li>The project may take some time to load. Once the assets have been loaded, the Unity window will launch.</li>
-                <li>In the "Assets" folder, there is a scene called "Stary Sky". Drag this scene, to the project hierarchy and delete the "Untitled" scene (or any other such scene). </li>
-                <li>Once the "Stary Sky" scene is loaded, click the play button to see the stars and constellations. When loading, there maybe an error, ignore this for now. Both the "Play" and the "Pause" button will be selected due to this error. Unselect the "Pause" button and that should allow for the scene to be viewed.</li>
-                <li>Since the single constellation being drawn is below the initialsol, the user will have to fly downward and maybe backward to be able to view the constellation. The constellation details are available in the console.</li>
-                <li><b>Note:</b> For the initial scope of the project 107574 stars have been plotted using a simple sphere and applying shaders as materials. The constellation being drawn is the first constellation from constellationship.txt file. The code written for it can handle all 88 constellations but that has not been implemented for now. In the console, the user can view the 8 lines being drawn for the first constellation in the log output.</li>
-              </ol>
-  
+        <h1>The Application</h1>
+        <h2>About</h2>
+        <p style="text-align: justify;">
+          Shining Star is the final project for the Virtual Reality class, CS 528, at the University of Illinois
+          Chicago. Built using Unity, this immersive application lets users explore the night sky in the CAVE system.
+          With interactive features like constellation viewing and time manipulation, it merges learning and
+          entertainment seamlessly, offering a captivating experience of the cosmos in virtual reality.</p>
+        <h2>How you can use the application</h2>
+        <p style="text-align: justify;">The application is designed to be used in the CAVE system, a virtual reality
+          environment that provides an immersive experience. To know more about the CAVE system you can read <a
+            href="https://today.uic.edu/step-into-a-virtual-world/" target="_blank">here</a>. The CAVE system uses head
+          tracking glasses and a wand for the user to be able to navigate through the environment. The user is also free
+          to move around in the given space area. While the CAVE is the most appropriate environment to experience this
+          application, there are additional options for the user to use this application such as the CAVE2 simulator,
+          Occulus and Vive. To interact with the application in the Simulator, interactions are given in the
+          Installation Section.</p>
+        <h2>Things you can do with it</h2>
+        <p style="text-align: justify;">This application has been developed using Unity for the CAVE. The key feature of
+          the application is its interactive functionality, facilitated through the use of the CAVE wand. Users have the
+          ability to engage with
+          the application in various ways, enhancing their exploration experience:</p>
+        <div class="container">
+          <figure>
+            <div class="image-row">
+              <img src="images/shiningstar/page1/1.png" alt="Image 1">
+              <img src="images/shiningstar/page1/2.png" alt="Image 2">
+              <img src="images/shiningstar/page1/3.png" alt="Image 3">
             </div>
+            <figcaption style="text-align: center;">The various menus of the application</figcaption>
+          </figure>
+        </div>
+        <ul>
+          <li><b>Navigate and Orient</b>: Users can fly in any direction and perform rotations (roll, pitch, and yaw)
+            using one
+            of the hand controllers. As users traverse the CAVE or maneuver through the dataset, the virtual world
+            provides feedback on their distance from Sol in parsecs.</li>
+
+          <li><b>Constellation Selection</b>: Users can bring up a menu offering at least five additional sets of
+            constellations to choose from or opt to display no constellations. The ability to select from multiple
+            constellations enhances user customization and exploration.</li>
+
+          <li><b>Time Control:</b> Users can start and stop time to observe the evolution of constellations and all
+            visible
+            star locations over time. By default, time progresses forward, but users can also rewind time for backward
+            observation.</li>
+
+          <li><b>Constellation Information:</b> Users can access additional information about one constellation,
+            enriching
+            their understanding and exploration of celestial objects.</li>
+
+          <li><b>Color Scheme Adjustment:</b> Users have the option to change the color scheme from stellar type to the
+            number
+            of known planets in the system, providing flexibility in visual representation.</li>
+
+          <li><b>Reset Functionality:</b> Users can reset their location, orientation, and time back to the starting
+            point,
+            offering a convenient way to return to the initial state of exploration.</li>
+
+          <li><b>Scale Adjustment:</b> Users can change the scale mapping of parsecs to feet, allowing them to increase
+            or
+            decrease the distances between stars according to their preference.</li>
+        </ul>
+
+
+        <h1>The Data:</h1>
+        <p style="text-align: justify;">To be able to display the stars and the constellations, we needed to work with
+          various datasets. In all we work with 8 datasets and 2 other files. These files can be found in the Assets
+          folder and the Resources folder.</p>
+        <table>
+          <tr>
+            <th>File Name</th>
+            <th>Purpose</th>
+            <th>Source (unmodified)</th>
+          </tr>
+          <tr>
+            <td>athyg_31_reduced_m10_cleaned_subset.csv</td>
+            <td>This file contains the data for all the stars. Initial it is 69MB and has 330341 rows × 34 columns. But
+              after perform the cleaning, it has 107574 rows × 11 columns. </td>
+            <td><a
+                href="https://github.com/astronexus/ATHYG-Database/blob/main/data/subsets/athyg_31_reduced_m10.csv.gz">Link</a>
+            </td>
+          </tr>
+          <tr>
+          <tr>
+            <td>constellation_coord.txt</td>
+            <td>This file contains the constellation name, number of stars in the constellation, and the hip ids
+              separated by a space for the Modern constellation dataset.</td>
+            <td><a
+                href="https://github.com/Stellarium/stellarium/blob/master/skycultures/modern/constellationship.fab">Link</a>
+            </td>
+          </tr>
+          <tr>
+            <td>indian-constellationship.txt</td>
+            <td>This file contains the constellation name, number of stars in the constellation, and the hip ids
+              separated by a space for the Indian constellation dataset.</td>
+            <td><a
+                href="https://github.com/Stellarium/stellarium/blob/master/skycultures/indian/constellationship.fab">Link</a>
+            </td>
+          </tr>
+          <tr>
+            <td>boorong-constellationship.txt</td>
+            <td>This file contains the constellation name, number of stars in the constellation, and the hip ids
+              separated by a space for the Boorong constellation dataset.</td>
+            <td><a
+                href="https://github.com/Stellarium/stellarium/blob/master/skycultures/boorong/constellationship.fab">Link</a>
+            </td>
+          </tr>
+          <tr>
+            <td>egyptian-constellationship.txt</td>
+            <td>This file contains the constellation name, number of stars in the constellation, and the hip ids
+              separated by a space for the Egyptian constellation dataset.</td>
+            <td><a
+                href="https://github.com/Stellarium/stellarium/blob/master/skycultures/egyptian/constellationship.fab">Link</a>
+            </td>
+          </tr>
+          <tr>
+            <td>romanian-constellationship.txt</td>
+            <td>This file contains the constellation name, number of stars in the constellation, and the hip ids
+              separated by a space for the Romanian constellation dataset.</td>
+            <td><a
+                href="https://github.com/Stellarium/stellarium/blob/master/skycultures/romanian/constellationship.fab">Link</a>
+            </td>
+          </tr>
+          <tr>
+            <td>norse-constellationship.txt</td>
+            <td>This file contains the constellation name, number of stars in the constellation, and the hip ids
+              separated by a space for the Norse constellation dataset.</td>
+            <td><a
+                href="https://github.com/Stellarium/stellarium/blob/master/skycultures/norse/constellationship.fab">Link</a>
+            </td>
+          </tr>
+          <tr>
+            <td>exoplanet_cleaned.csv</td>
+            <td>This file is the dataset for exoplanets. This file contains the hip id of the star and the number of
+              planets around it. This file is used to changed the colour scheme of the stars.</td>
+            <td><a
+                href="https://exoplanetarchive.ipac.caltech.edu/cgi-bin/TblView/nph-tblView?app=ExoTbls&config=PS">Link</a>
+            </td>
+          </tr>
+          <tr>
+            <td>Unicorn Illustration.png</td>
+            <td>This image is used to display the constellation 'Monoceros' and it's representation in the night sky,
+              when showing the additional information.</td>
+            <td><a href="http://www.whitby-astronomers.com/focus/tartan-unicorn">Link</a>
+            </td>
+          </tr>
+          <tr>
+            <td>Galaxy sound background.ogg</td>
+            <td>This sets the background audio for the application.</td>
+            <td><a href="https://freesound.org/people/Isaac200000/sounds/260572/">Link</a>
+            </td>
+          </tr>
+        </table>
+        <h2>Cleaning steps performed:</h2>
+        The pre-processing performed on the datasets were either performed manually, or using Python and <a
+          href="https://pandas.pydata.org">Pandas</a> library. The steps performed are as follows:
+
+        <ul>
+          <li><b>Stars Data:</b> To clean this file, we first select a subset of 11 columns since these are the ones we
+            work with. We remove the files which have null values for X, Y, Z, VX, VY, VZ and Spect entries. Then we
+            remove the data for which the spectral class does not lie in 'O','B','A','F','G','K','M'. Lastly we only
+            select stars which are within a range of 25 light years.</li>
+          <li><b>Constellation Data:</b> For the 6 constellation data files, we remove all the double spaces and tab
+            spaces that occur in the file and replace them with a single space. Then we also remove any trailing empty
+            lines in these files to prevent errors. These files are manually cleaned.</li>
+          <li><b>Exoplanet Data:</b> We remove all lines with null values, and then group the values by hip ids to
+            remove all the duplicates as well. This is done using the Pandas library.</li>
+        </ul>
+        In code, when working with data files, we ensure that the lines are being checked for null values to prevent any
+        errors with reading the files into Unity.
+        <h1>Installation:</h1>
+        <h2>Loading the application:</h2>
+        <div class="row mb-3">
+          <div class="col-lg-12">
+            <ol style="text-align: justify;">
+              <li>Clone the repository from this <a href="https://github.com/advaitpai/CS528_AdvaitPai"
+                  target="_blank">GitHub Link</a>. On the code button, select "Download Zip".
+              <li>Unzip and open the downloaded folder.</li>
+              <li>The <b>data folder</b> contains the <b>cleaning.ipynb</b> and <b>exoplanet_clean.ipynb</b> which
+                contains the code written by me to clean the data.
+                This can be directly viewd in the GitHub repository or using JupyterNotebook or Visual Studio Code.
+              </li>
+              <li>The <b>omicron-unity</b> directory contains the project I am developing for the CAVE2. It is a
+                stripped down
+                version of the Cube World Example.</li>
+              <li>Download the <a href="https://unity.com/releases/editor/archive" target="_blank">Unity Version
+                  2019.2.11f1</a> using Unity Hub. If you do not have <a href="https://unity.com/unity-hub"
+                  target="_blank">Unity Hub</a>, install that as well.</li>
+              <li>Once downloaded, then in Unity Hub, click the "Add" button and then select the subfolder omicron-unity
+                from the downloaded folder. It should automatically pickup the required Unity Version but if asked,
+                choose the appropriate version.</li>
+              <li>The project may take some time to load. Once the assets have been loaded, the Unity window will
+                launch.</li>
+              <li>In the "Assets" folder, there is a scene called "Stary Sky". Drag this scene, to the project hierarchy
+                and delete the "Untitled" scene (or any other such scene). Below is a view of the window. </li>
+              <div class="col-lg-4 px-5">
+                <img class="img-fluid" src="./images/shiningstar/page3/1.png" />
+              </div>
+              <li>Once dragged, click the Omicron Tab in the menu and select "Configure for CAVE2 simulator" as shown
+                below.</li>
+              <div class="col-lg-4 px-5">
+                <img class="img-fluid" src="./images/shiningstar/page3/2.png" />
+              </div>
+              <li>For now, we demonstrate how to run the application on the CAVE2 simulator. Once the "Stary Sky" scene
+                is loaded, click the play button to see the stars and constellations. When
+                loading, there maybe an error, ignore this for now. Both the "Play" and the "Pause" button will be
+                selected due to this error. Unselect the "Pause" button and that should allow for the scene to be
+                viewed.</li>
+              <li>To use the application on the CAVE, select the "Configure for CAVE2 Build" option and then follow
+                instructions <a
+                  href="https://github.com/uic-evl/omicron-unity/wiki/Guide-for-running-Unity-in-CAVE2">here</a>.
+                The sections "Configure a Unity project for use with the CAVE2 Simulator" and "Building on CAVE2"
+                contain the steps to build the application for the CAVE.</li>
+              <li>To use the application on the Oculus, select the "Configure for Oculus" and then in the File -> Build
+                Settings, switch platform to Android, choose the appropriate options, and then "Build and Run".</li>
+            </ol>
+            <h2>Interactions in the CAVE2 simulator:</h2>
+
+            <p style="text-align: justify;"> Once the scene is loaded. WASD keys can be used to move in the world. QE
+              keys can be used to rotate left and right respectively. Right-Click to open the menu and use arrow keys to
+              navigate options, and use the Right-Click to select an option. Left-Click is used to go back and close the
+              menu. For sliders for scale and movement speed, navigate to them using the Right-Click and the arrow keys,
+              and then move the slider using left and right arrow keys.</p>
+
+            <h1>Interesting Finds during development and using:</h1>
+
+            <p style="text-align: justify;">While developing the application, I had to use a combination of both User
+              Experience knowledge as well as Coding skills. The most important find for me was that it is important to
+              organise variables and data correctly for efficient usage and re-usage. C# has restrictions on how
+              variables can be stored, accessed or indexed and since there may be multiple interactions possible with
+              the system, there are also different functions interacting with the same variable, making it pertinent to
+              maintain consistency. </p>
+
+            <p style="text-align: justify;"></p>
+            <h1>Optimisations I performed</h1>
+            <ul>
+              <li><b>Reducing the search space:</b> In general when looping through data to search for matched, like
+                hip_id, as and when possible, I have put in break or continue statements so that the search space is
+                reduced.</li>
+                <li><b></b></li>
+                <li><b>Shadows:</b>Through the setting of quality and GameObjects being spawned, I have tried to turn off Cast Shadows, </li>
+                <li><b>Stars:</b> I have created a prefab of a star using a simple Quad and applying Laser Particle material. These stars then move there orientation using LookAt() function which is called in code.</li>
+                <li><b>Dynamic Rendering with variable thresholds:</b> To keep the frame rate steady, I use dynamic rendering. First the code checks if the user has moved beyond a certain radius, and if they have moved, then set stars at a certain radius as active and then reset the last position. Now depending on if the stars are moving or not, the threshold changes.</li>
+            </ul>
           </div>
-          
+        </div>
+
       </div>
     </div>
 
