@@ -253,18 +253,40 @@
               organise variables and data correctly for efficient usage and re-usage. C# has restrictions on how
               variables can be stored, accessed or indexed and since there may be multiple interactions possible with
               the system, there are also different functions interacting with the same variable, making it pertinent to
-              maintain consistency. </p>
-
+              maintain consistency. For this I created a StarData class which would store all values of the individual
+              star.</p>
+            <p style="text-align: justify;">I also understood the importance of how even if we have all the GameObjects
+              created, just by using the
+              setActive() calls, we can bring in significant optimisations. I was able to load all the constellation
+              data before startup, and only toggle between GameObjects when necessary.</p>
+            <p>When working with creating the LineRenderer, initially I began with trying to delete and redraw lines,
+              but for efficiency if I wanted to run this for every frame, it would be infeasible. This showed the
+              importance of how GameObjects are to be handled.</p>
+            <p>Currently all the stars transform their position and face towards the user at one go, hence the </p>
+            <p>Given time, I would wish to use some sorting algorithms for the data so I could scale up the number of
+              stars being implemented for the application. I would like to explore the effect of rendering within the Field of View as
+              well. For this project I did not implement Field of View as the CAVE is also meant for collaboration and
+              with multiple viewers, the field of view is only dependent on the person wearing the tracking glasses.</p>
             <p style="text-align: justify;"></p>
             <h1>Optimisations I performed</h1>
             <ul>
               <li><b>Reducing the search space:</b> In general when looping through data to search for matched, like
                 hip_id, as and when possible, I have put in break or continue statements so that the search space is
-                reduced.</li>
-                <li><b></b></li>
-                <li><b>Shadows:</b>Through the setting of quality and GameObjects being spawned, I have tried to turn off Cast Shadows, </li>
-                <li><b>Stars:</b> I have created a prefab of a star using a simple Quad and applying Laser Particle material. These stars then move there orientation using LookAt() function which is called in code.</li>
-                <li><b>Dynamic Rendering with variable thresholds:</b> To keep the frame rate steady, I use dynamic rendering. First the code checks if the user has moved beyond a certain radius, and if they have moved, then set stars at a certain radius as active and then reset the last position. Now depending on if the stars are moving or not, the threshold changes.</li>
+                reduced. For example, when a hip id needs to be searched for, once found the loop breaks instead of
+                runing continously.</li>
+              <li><b></b></li>
+              <li><b>Shadows:</b>Through the setting of quality and GameObjects being spawned, I have tried to turn off
+                Cast Shadows and Receive Shadow. </li>
+              <li><b>Stars:</b> I have created a prefab of a star using a simple Quad and applying Laser Particle
+                material. These stars then move there orientation using LookAt() function which is called in code.</li>
+              <li><b>Dynamic Rendering with variable thresholds:</b> To keep the frame rate steady, I use dynamic
+                rendering. First the code checks if the user has moved beyond a certain radius, and if they have moved,
+                then set stars at a certain radius as active and then reset the last position. Now depending on if the
+                stars are moving or not, the threshold changes. Ideally, the threshold should also change when scale
+                changes but that has not been implemented for this project due to complexity.</li>
+              <li>
+
+              </li>
             </ul>
           </div>
         </div>
