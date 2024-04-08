@@ -17,18 +17,24 @@
     <div class="row my-5">
       <!-- Title -->
 
-      <div class="col-lg-8 offset-lg-2">
+      <div class="col-lg-10 offset-lg-1">
         <!-- Steps to reproduce -->
 
-        <h2>Project by Advait Pai</h2>
+        <p>Project By: Advait Pai<br>Course: CS 528 - Virtual Reality<br>University of Illinois Chicago</p>
 
-        <h1>The Application</h1>
-        <h2>About</h2>
+
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/pjYqNsF9AXw?si=4hrjq_wIGW1-2kNE"
+          title="YouTube video player" frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+        <h1>Section 1 - The Application</h1>
+        <h2>About the application</h2>
         <p style="text-align: justify;">
           Shining Star is the final project for the Virtual Reality class, CS 528, at the University of Illinois
           Chicago. Built using Unity, this immersive application lets users explore the night sky in the CAVE system.
           With interactive features like constellation viewing and time manipulation, it merges learning and
-          entertainment seamlessly, offering a captivating experience of the cosmos in virtual reality.</p>
+          entertainment seamlessly, offering a captivating experience in virtual reality.</p>
         <h2>How you can use the application</h2>
         <p style="text-align: justify;">The application is designed to be used in the CAVE system, a virtual reality
           environment that provides an immersive experience. To know more about the CAVE system you can read <a
@@ -46,9 +52,9 @@
         <div class="container">
           <figure>
             <div class="image-row">
-              <img src="images/shiningstar/page1/1.png" alt="Image 1">
-              <img src="images/shiningstar/page1/2.png" alt="Image 2">
-              <img src="images/shiningstar/page1/3.png" alt="Image 3">
+              <img class="m-2" src="images/shiningstar/page1/1.png" alt="Image 1">
+              <img class="m-2" src="images/shiningstar/page1/2.png" alt="Image 2">
+              <img class="m-2" src="images/shiningstar/page1/3.png" alt="Image 3">
             </div>
             <figcaption style="text-align: center;">The various menus of the application</figcaption>
           </figure>
@@ -86,11 +92,11 @@
         </ul>
 
 
-        <h1>The Data:</h1>
+        <h1>Section 2 - The Data:</h1>
         <p style="text-align: justify;">To be able to display the stars and the constellations, we needed to work with
           various datasets. In all we work with 8 datasets and 2 other files. These files can be found in the Assets
           folder and the Resources folder.</p>
-        <table>
+        <table class="table table-light">
           <tr>
             <th>File Name</th>
             <th>Purpose</th>
@@ -192,7 +198,7 @@
         </ul>
         In code, when working with data files, we ensure that the lines are being checked for null values to prevent any
         errors with reading the files into Unity.
-        <h1>Installation:</h1>
+        <h1>Section 3 - Installation:</h1>
         <h2>Loading the application:</h2>
         <div class="row mb-3">
           <div class="col-lg-12">
@@ -218,12 +224,12 @@
               <li>In the "Assets" folder, there is a scene called "Stary Sky". Drag this scene, to the project hierarchy
                 and delete the "Untitled" scene (or any other such scene). Below is a view of the window. </li>
               <div class="col-lg-4 px-5">
-                <img class="img-fluid" src="./images/shiningstar/page3/1.png" />
+                <img style="height: 40rem; width:auto;" src="./images/shiningstar/page3/1.png" />
               </div>
               <li>Once dragged, click the Omicron Tab in the menu and select "Configure for CAVE2 simulator" as shown
                 below.</li>
               <div class="col-lg-4 px-5">
-                <img class="img-fluid" src="./images/shiningstar/page3/2.png" />
+                <img style="height: 20rem; width:auto;" src="./images/shiningstar/page3/2.png" />
               </div>
               <li>For now, we demonstrate how to run the application on the CAVE2 simulator. Once the "Stary Sky" scene
                 is loaded, click the play button to see the stars and constellations. When
@@ -240,13 +246,19 @@
             </ol>
             <h2>Interactions in the CAVE2 simulator:</h2>
 
-            <p style="text-align: justify;"> Once the scene is loaded. WASD keys can be used to move in the world. QE
-              keys can be used to rotate left and right respectively. Right-Click to open the menu and use arrow keys to
-              navigate options, and use the Right-Click to select an option. Left-Click is used to go back and close the
-              menu. For sliders for scale and movement speed, navigate to them using the Right-Click and the arrow keys,
-              and then move the slider using left and right arrow keys.</p>
+            <p style="text-align: justify;"> Once the scene is loaded - </p>
+            <ul>
+              <li>WASD keys can be used to move in the world.</li>
+              <li>QE keys can be used to rotate left and right respectively.</li>
+              <li>Right-Click to open the menu and use arrow keys to
+                navigate options, and use the Right-Click to select an option.</li>
+              <li>Left-Click is used to go back and close the
+                menu.</li>
+              <li>For sliders for scale and movement speed, navigate to them using the Right-Click and the arrow keys,
+                and then move the slider using left and right arrow keys.</li>
+            </ul>
 
-            <h1>Interesting Finds during development and using:</h1>
+            <h1>Section 4 - Interesting Finds during development and using:</h1>
 
             <p style="text-align: justify;">While developing the application, I had to use a combination of both User
               Experience knowledge as well as Coding skills. The most important find for me was that it is important to
@@ -254,7 +266,9 @@
               variables can be stored, accessed or indexed and since there may be multiple interactions possible with
               the system, there are also different functions interacting with the same variable, making it pertinent to
               maintain consistency. For this I created a StarData class which would store all values of the individual
-              star.</p>
+              star. Any modification, or access for star values when creating/moving/destorying the GameObjects are only
+              allowed through this class variables, which are held as static throughout hence no local variable errors
+              happen.</p>
             <p style="text-align: justify;">I also understood the importance of how even if we have all the GameObjects
               created, just by using the
               setActive() calls, we can bring in significant optimisations. I was able to load all the constellation
@@ -262,32 +276,81 @@
             <p>When working with creating the LineRenderer, initially I began with trying to delete and redraw lines,
               but for efficiency if I wanted to run this for every frame, it would be infeasible. This showed the
               importance of how GameObjects are to be handled.</p>
-            <p>Currently all the stars transform their position and face towards the user at one go, hence the </p>
+            <p>Currently all the stars transform their position and face towards the user at one go, hence this may feel
+              abrupt to the user and not very natural. To prevent this, as a future scope, the stars could be randomly
+              accessed within a certain radius and can be updated instead of a single update every x number of seconds.
+            </p>
             <p>Given time, I would wish to use some sorting algorithms for the data so I could scale up the number of
-              stars being implemented for the application. I would like to explore the effect of rendering within the Field of View as
+              stars being implemented for the application. I would like to explore the effect of rendering within the
+              Field of View as
               well. For this project I did not implement Field of View as the CAVE is also meant for collaboration and
               with multiple viewers, the field of view is only dependent on the person wearing the tracking glasses.</p>
             <p style="text-align: justify;"></p>
-            <h1>Optimisations I performed</h1>
+            <h1>Section 5 - Optimisations I performed:</h1>
             <ul>
               <li><b>Reducing the search space:</b> In general when looping through data to search for matched, like
                 hip_id, as and when possible, I have put in break or continue statements so that the search space is
                 reduced. For example, when a hip id needs to be searched for, once found the loop breaks instead of
                 runing continously.</li>
-              <li><b></b></li>
+              <li><b>LineRenderer:</b> For the LineRenderer initially the material I was using was 'Sprites/Default' and
+                then I was attempting to remove the shadow functionalities from the lines, which was significantly
+                affecting my startup time. To prevent this, I changed the material to Unlit/Color, which does not have
+                shadows hence the startup time increased significantly. I also changed useWorldSpace=true for the
+                LineRenderer.</li>
               <li><b>Shadows:</b>Through the setting of quality and GameObjects being spawned, I have tried to turn off
                 Cast Shadows and Receive Shadow. </li>
               <li><b>Stars:</b> I have created a prefab of a star using a simple Quad and applying Laser Particle
                 material. These stars then move there orientation using LookAt() function which is called in code.</li>
               <li><b>Dynamic Rendering with variable thresholds:</b> To keep the frame rate steady, I use dynamic
                 rendering. First the code checks if the user has moved beyond a certain radius, and if they have moved,
-                then set stars at a certain radius as active and then reset the last position. Now depending on if the
+                then it sets the stars at a certain radius as active and then reset the last position. Now depending on
+                if the
                 stars are moving or not, the threshold changes. Ideally, the threshold should also change when scale
                 changes but that has not been implemented for this project due to complexity.</li>
               <li>
-
+                Constellation Line Movement: The constellation lines are drawn using LineRenderer. To move the lines, I
+                store a dictionary of values of hip_id and the location in the space. This dictionary would also update
+                when motion would occur, or before a different constellation is selected, or if the scale is changed by
+                the user. Once the dictionary is updated, both the hip_id of the line are stored in it's nanme which are
+                then indexed in the dicitonary and the lines positons are updated. The dictionary only contains hip_id
+                of the star which is part of any of the six constellation, hence keeping its size small.
+              </li>
+              <li><b>Updating values of GameObjects:</b> When trying to change the scale of the stars, it was important
+                to
+                ensure that if I was calculating new X,Y,Z values for the stars, then I would have to make sure the
+                value was consistent. For example, if the user reduces the scale to 0.5 and then to 0.333, the
+                computation should be such that value should not become 33% and not 16.5%. Hence I did not overwrite
+                the values in StarData but only multiplied the position transform of the GameObject by the scale. Also,
+                values to the GameObject were only updated if it was visible, otherwise only its corresponding value in
+                the StarData class is updated. This I assumed would reduce the computational complexity as well.</li>
+              <li>
+                <b>Tradeoff between code organization and variable sharing:</b> Since multiple objects and interactions
+                rely on the same set of variables, either all functions could be in one single class, or variables need
+                to be shared. Hence in my project, StarDataLoader is the main class, from which all other classes
+                inherit the variables and work with. This also had additional advantages as if I wanted to create one
+                script to handle interactions, and the other to handle constellations, any shared variable such as
+                constellation_type could be accessed by both scripts. This also helped in reducing the number of errors
+                that could occur due to local variables.
+              </li>
               </li>
             </ul>
+            <h1>Some Screenshots:</h1>      
+            <figure>
+              <img style="height: 20rem; width:auto;" src="images/shiningstar/page4/1.png" alt="Image 1">
+              <figcaption>Introduction Panel</figcaption>
+              </figure>
+              <figure>
+                <img style="height: 5rem; width:auto;" src="images/shiningstar/page4/2.png" alt="Image 2">
+                <figcaption>Information Panel at the foot of the CAVE</figcaption>
+                </figure>
+                <figure>
+                  <img style="height: 20rem; width:auto;" src="images/shiningstar/page4/3.png" alt="Image 3">
+                  <figcaption>Exoplanet Colours</figcaption>
+                  </figure>
+                  <figure>
+                    <img style="height: 20rem; width:auto;" src="images/shiningstar/page4/4.png" alt="Image 4">
+                    <figcaption>Constellation Change</figcaption>
+                    </figure>
           </div>
         </div>
 
